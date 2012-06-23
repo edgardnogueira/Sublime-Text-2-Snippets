@@ -1,0 +1,42 @@
+<snippet>
+	<content><![CDATA[
+<?php  defined('SYSPATH') or die('No direct access allowed.');
+
+abstract class Model_Generated_${1:name} extends Model_Auth_User {
+	
+    protected $_table_name = '${1:name}';
+    
+    public $pk_name = 'id';
+    
+	protected $_has_many = array(
+       
+		'comentario'  => array(  'model' => 'software_comentario',
+		                        'far_key' => 'software_id',
+		                        'foreign_key' => 'software_id',),
+		   
+		                                 
+		'tag'  => array('through' => 'softwares_tags'),
+        
+        /* Exemplos no model user 
+		'user_post_watch' => array('user',
+			'through' => 'users_posts_watch',
+			'foreign_key' => 'post_id',
+            'far_key' => 'user_id',
+		),
+        */          
+
+	);
+	
+	protected $_belongs_to = array(
+
+	    /* Exemplos no model user
+		    'users_following' => array(),
+	    */
+	);	
+    
+
+
+]]></content>
+<tabTrigger>komodel</tabTrigger>
+<description>Kohana Model</description>
+</snippet>

@@ -1,0 +1,27 @@
+<snippet>
+	<content><![CDATA[
+<?php  defined('SYSPATH') or die('No direct access allowed.');
+
+class Model_${1:name} extends Model_Generated_${1:name} {
+
+const ATIVO	= 1;
+const INATIVO	= 0;
+
+public $options_status = array(
+        '0' => 'inativo',
+        '1' => 'ativo'
+);
+	protected $_created_column = array(
+	'column' => 'created',
+	'format' => TRUE,
+);
+    
+	protected $_updated_column = array(
+	'column' => 'updated',
+	'format' => TRUE,
+);    
+
+]]></content>
+<tabTrigger>komodel</tabTrigger>
+<description>Kohana Model</description>
+</snippet>

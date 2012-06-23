@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+ if ((\$${1:name} = \$this->get_cache('${1:name}')) == '') 
+                \$${1:name} =  \$this->set_cache('${1:name}', \$t = \$data), Kohana::\$config->load('timeout')->cache_timeout_categoria);
+]]></content>
+<tabTrigger>kocache</tabTrigger>
+<description>Kohana cache</description>
+</snippet>
